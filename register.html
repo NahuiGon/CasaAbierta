@@ -1,96 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Abierta</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Register CasaAbierta</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
-    
-</head>
-<body>
-    <div class="container-fluid p-0 bg-light vh-100">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark p-0">
-            <div class="container d-flex justify-content-center">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="/img/logo_home.png" alt="" class="d-inline-block align-text-top img">
-                </a>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <div class="col">
-                    <form class="mt-4 mb-4 content p-4">
-                        <div class="row mb-4">
-                            <h2 class="text-center">Inscripción</h2>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-outline">
-                                    <input type="text" id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1">Nombre</label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-outline">
-                                    <input type="text" id="form3Example2" class="form-control" />
-                                    <label class="form-label" for="form3Example2">Apellido</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3">Email</label>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <input type="password" id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4">Contraseña</label>
-                        </div>
-                        <div class="form-check mb-4">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="form2Example33" checked />
-                            <label class="form-check-label" for="form2Example33">
-                            Acepto recibir correos electrónicos promocionales e instructivos de Casa Abierta
-                            </label>
-                        </div>
-                        <p class="text-muted text-center">
-                            Al registrarme, acepto los Términos de uso & la Política de privacidad de Casa Abierta.
-                        </p>
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-lg btn-custom mb-3">Registrarme</button>
-                        </div>
-                        <div>
-                            Ya tienes una Cuenta? <a class="text-muted" href="/login.html">Ingreso</a>
-                        </div>
-                    </form>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Footer -->
-            <footer class="bg-dark text-center text-white">
-                <div class="container p-3">
-                    <section>
-                        <h5 class="mb-2">Seguinos en Nuestras Redes Sociales</h5>
-                        <a class="m-2 social-icon" href="#!"><i class="bi bi-facebook"></i></a>
-        
-                        <a class="m-2 social-icon" href="#!"><i class="bi bi-twitter"></i></a>
-                
-                        <a class="m-2 social-icon" href="#!"><i class="bi bi-instagram"></i></a>
-                    </section>
-                </div>
-                <!-- Copyright -->
-                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © CasaAbierta Copyright
-                </div>
-            </footer>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    <link href="css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="d-flex flex-column h-100 text-center">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container justify-content-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo_home.png" alt="" class="d-inline-block align-text-top img">
+          </a>
         </div>
+      </nav>
+    </header>
+    <main class="form-signin w-100 m-auto">
+      <form>
+        <img class="mb-4" src="img/logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Porfavor Registrate</h1>
+        <div class="form-floating">
+          <input type="text" class="form-control name" id="floatingText" placeholder="Nombre">
+          <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control lastname" id="floatingText" placeholder="Apellido">
+          <label for="floatingInput">Apellido</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="email@example.com">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+
+        <div class="checkbox d-flex m-3 justify-content-start">
+          <label>
+            <input type="checkbox" value="remember-me"> Recordar
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-custom" type="submit">Registrarme</button>
+        <p class="mt-4 mb-3 text-muted">Ya tienes Cuenta? <a href="login.html" class="text-muted">Iniciar Sesión</a></p>
+        <p class="mt-3 mb-3 text-muted">CasaAbierta 2022 - &copy;Copyright</p>
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-dark text-center text-white p-0">
+      <div class="container p-4">
+        <h4>Seguinos en nuestras Redes Sociales</h4>
+        <section>
+            <a class="m-3 social-icon" href="#!"><i class="bi bi-facebook"></i></a>
+
+            <a class="m-3 social-icon" href="#!"><i class="bi bi-twitter"></i></a>
+    
+            <a class="m-3 social-icon" href="#!"><i class="bi bi-instagram"></i></a>
+        </section>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    CasaAbierta 2022 - ©Copyright
     </div>
 
-    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
