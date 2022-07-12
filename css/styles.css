@@ -190,24 +190,32 @@ section.resume-section {
 .card{
     cursor: pointer;
     transition: all 400ms;
+    
+}
+
+.card-head{
+    overflow: hidden;
 }
 
 .card:hover{
     transform: translateY(-7px);
     box-shadow: 7px 10px 10px #eee;
+    animation: translate 2s infinite linear;
 }
 
-.card:hover .btn-custom{
-    animation: scale 1s infinite linear;
+.card:hover img{
+    transform: scale(1.2,1.2);
+    transition: all 800ms;
 }
 
 .social-icon{
     color: #fff;
     font-size: 30px;
+    transition: all 400ms;
 }
 
 .social-icon:hover{
-    color: #eee;
+    color: #ffc107;
     font-size: 30px;
 }
 
@@ -221,7 +229,13 @@ section.resume-section {
 
 @keyframes scale {
     50%{
-        transform: scale(1.05,1.05);
+        transform: scale(1.02,1.02);
+    }
+}
+
+@keyframes translate {
+    50%{
+        transform: translateY(-10px);
     }
 }
 
