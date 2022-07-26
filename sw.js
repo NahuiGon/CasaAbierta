@@ -8,8 +8,8 @@ const CACHE_NAME = 'v1_cache_casaabierta',
     'https://use.fontawesome.com/releases/v5.0.7/css/all.css',
     'https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.woff2',
     'css/style.css',
-    '/js/script.js',
-    'img/image.png',
+    'js/script.js',
+    'img/favicon-16x16.png',
     'img/favicon-16x16.png'
   ]
 
