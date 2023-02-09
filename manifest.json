@@ -1,7 +1,7 @@
 {
-  "name": "#CasaAbierta",
-  "short_name": "#CasaAbierta",
-  "description": "Bienvenidos a #CasaAbierta",
+  "name": "CasaAbierta",
+  "short_name": "CasaAbierta",
+  "description": "Bienvenidos a CasaAbierta",
   "background_color": "#212529",
   "theme_color": "#FFC107",
   "orientation": "portrait",
