@@ -72,32 +72,8 @@
     color: #ffc107;
 }
 
-.portada1{
-    background: url("../img/portada2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 700px;
-}
-
-.portada2{
-    background: url("../img/portada3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 700px;
-}
-
-.portada3{
-    background: url("../img/portada4.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+.portadas{
+    object-fit: cover;
     width: 100%;
     min-height: 700px;
 }
