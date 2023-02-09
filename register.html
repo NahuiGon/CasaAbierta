@@ -82,30 +82,33 @@
       </nav>
     </header>
     <main class="form-signin w-100 m-auto">
-      <form >
-        <h1 class="h3 mb-3 fw-normal">Porfavor Registrate</h1>
+      <form action="javascript:void(0);" onsubmit="aplicacion.Agregar()" method="POST">
+        <h1 class="h3 mb-3 fw-normal">Usuario</h1>
         <div class="form-floating">
-          <input type="text" class="form-control name" placeholder="Nombre" required>
-          <label for="floatingInput">Nombre</label>
+          <input type="text" class="form-control name" id="name" placeholder="Nombre" required>
+          <label for="name">Nombre</label>
         </div>
         <div class="form-floating">
-          <input type="text" class="form-control lastname" id="floatingText" placeholder="Apellido" required>
-          <label for="floatingInput">Apellido</label>
+          <input type="text" class="form-control lastname" id="lastname" placeholder="Apellido" required>
+          <label for="lastname">Apellido</label>
         </div>
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="email@example.com" required>
-          <label for="floatingInput">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+          <label for="email">Email</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
-          <label for="floatingPassword">Contraseña</label>
+          <input type="number" class="form-control" id="dni" placeholder="Dni" required>
+          <label for="dni">Dni</label>
+        </div>
+        <div class="form-floating">
+          <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+          <label for="phone">Telefono</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+          <label for="password">Contraseña</label>
         </div>
 
-        <div class="checkbox d-flex m-3 justify-content-start">
-          <label>
-            <input type="checkbox" value="remember-me"> Recordar
-          </label>
-        </div>
         <button class="w-100 btn btn-lg btn-custom" type="submit">Registrarme</button>
         <p class="mt-4 mb-3 text-muted">Ya tienes Cuenta? <a href="login.html" class="text-muted">Iniciar Sesión</a></p>
       </form>
@@ -116,20 +119,21 @@
       <div class="container p-4">
         <span class="fs-4">Seguinos en nuestras Redes Sociales</span>
         <section class="anim-2">
-            <a class="m-3 social-icon" href="#!"><i class="bi bi-facebook"></i></a>
-
             <a class="m-3 social-icon" href="#!"><i class="bi bi-twitter"></i></a>
     
             <a class="m-3 social-icon" href="#!"><i class="bi bi-instagram"></i></a>
         </section>
-    </div>
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    CasaAbierta 2022 - ©Copyright
-    </div>
+      </div>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        CasaAbierta 2022 - ©Copyright
+      </div>
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+
   </body>
 </html>

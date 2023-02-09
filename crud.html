@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Tabla de Usuarios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    <link href="css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="apple-touch-icon" href="img/favicon-16x16.png">
+    <link rel="apple-touch-startup-image" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container justify-content-center">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo_home.png" alt="" class="d-inline-block align-text-top img">
+            </a>
+          </div>
+        </nav>
+    </header>
+    <div class="container w-100 m-auto">
+        <!-- Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="javascript:void(0);" onsubmit="aplicacion.Actualizar()" method="POST">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="editDni" class="form-label"></label>
+                            <input readonly class="form-control" type="number" name="editDni" id="editDni" aria-describedby="helpId" placeholder="Dni del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editName" class="form-label"></label>
+                            <input required class="form-control" type="text" name="editName" id="editName" aria-describedby="helpId" placeholder="Nombre del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editLastname" class="form-label"></label>
+                            <input required class="form-control" type="text" name="editLastname" id="editLastname" aria-describedby="helpId" placeholder="Apellido del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label"></label>
+                            <input required class="form-control" type="email" name="editEmail" id="editEmail" aria-describedby="emailhelpId" placeholder="Mail del Usuario">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="editPassword" class="form-label"></label>
+                            <input required class="form-control" type="password" name="editPassword" id="editPassword" aria-describedby="helpId" placeholder="Contraseña del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editPhone" class="form-label"></label>
+                            <input required class="form-control" type="number" name="editPhone" id="editPhone" aria-describedby="emailhelpId" placeholder="Celular del Usuario">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-success">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <!--<div class="col-md-12">
+
+            <div class="card">
+                <div class="card-header">
+                    Usuarios
+                </div>
+                <div class="card-body">
+                    <form action="javascript:void(0);" onsubmit="aplicacion.Agregar()" method="POST">
+                        <div class="mb-3">
+                            <label for="dni" class="form-label"></label>
+                            <input required class="form-control" type="number" name="dni" id="dni" aria-describedby="helpId" placeholder="Dni del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label"></label>
+                            <input required class="form-control" type="text" name="name" id="name" aria-describedby="helpId" placeholder="Nombre del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label"></label>
+                            <input required class="form-control" type="text" name="lastname" id="lastname" aria-describedby="helpId" placeholder="Apellido del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"></label>
+                            <input required class="form-control" type="email" name="email" id="email" aria-describedby="emailhelpId" placeholder="Mail del Usuario">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label"></label>
+                            <input required class="form-control" type="password" name="password" id="password" aria-describedby="helpId" placeholder="Contraseña del Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label"></label>
+                            <input required class="form-control" type="number" name="phone" id="phone" aria-describedby="emailhelpId" placeholder="Celular del Usuario">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                    </form>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="col-md-12 table-responsive">
+            <table class="table table-hover table-dark align-middle caption-top">
+                <caption class="fs-1">Usuarios</caption>
+                <thead>
+                    <tr>
+                        <th>Dni</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="users">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-dark text-center text-white p-0">
+        <div class="container p-4">
+          <span class="fs-4">Seguinos en nuestras Redes Sociales</span>
+          <section class="anim-2">
+              <a class="m-3 social-icon" href="#!"><i class="bi bi-twitter"></i></a>
+      
+              <a class="m-3 social-icon" href="#!"><i class="bi bi-instagram"></i></a>
+          </section>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        CasaAbierta 2022 - ©Copyright
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
